@@ -1,8 +1,4 @@
 <?php
-/**
- * Configuration de la base de données
- * Classe Database pour gérer la connexion PDO
- */
 
 class Database {
     // Propriétés privées pour l'encapsulation
@@ -14,7 +10,7 @@ class Database {
 
     /**
      * Méthode pour établir la connexion à la base de données
-     * @return PDO|null
+     * @return PDO | null
      */
     public function getConnection() {
         $this->conn = null;
@@ -30,7 +26,6 @@ class Database {
         } catch(PDOException $exception) {
             echo "Erreur de connexion : " . $exception->getMessage();
         }
-
         return $this->conn;
     }
 }
